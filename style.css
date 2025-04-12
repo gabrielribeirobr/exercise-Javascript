@@ -1,0 +1,10 @@
+body{
+    background-color: aqua;
+}
+
+.main-box{
+    background-color:azure;
+    border-radius: 5px;
+    width: max-content;
+    padding: 20px;
+}
