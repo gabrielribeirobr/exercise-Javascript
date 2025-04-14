@@ -1,5 +1,23 @@
-const soma = (numero1, numero2) => numero1 + numero2
 
-soma(5,2)
+document.getElementById('btn').addEventListener('click', calcularIdadeCachorro);
 
-console.log(soma)
+
+
+
+function calcularIdadeCachorro(){
+
+  let idadeHumano = parseInt(document.getElementById('code').value);
+  let resultadoDiv = document.getElementById('resultado');
+
+  if(idadeHumano <= 0 || isNaN(idadeHumano) ){
+    resultadoDiv.innerHTML = 'Insira uma idade válida!';
+
+    return;
+  }
+
+  let idadeCachorro = idadeHumano * 7;
+
+  resultadoDiv.innerHTML = `Seu cachorro teria ${idadeCachorro} anos em idade canina!`;
+}
+
+calcularIdadeCachorro();
