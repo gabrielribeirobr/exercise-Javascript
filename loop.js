@@ -19,4 +19,3 @@ function calcularIdadeCachorro(){
 
   resultadoDiv.innerHTML = `Seu cachorro teria ${idadeCachorro} anos em idade canina!`;
 }
-
