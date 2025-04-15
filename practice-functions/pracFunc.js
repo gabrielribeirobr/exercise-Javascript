@@ -6,7 +6,7 @@ let func = sayHi;
 
 func();  */
 
-function ask(question, yes, no){
+/* function ask(question, yes, no){
     if (confirm(question)) yes()
 
     else no()
@@ -20,4 +20,12 @@ function showCancel(){
     alert("Voce discordou")
 }
 
-ask("Você concorda que o Vasco é o melhor time do Brasil?", showOk, showCancel);
+ask("Você concorda que o Vasco é o melhor time do Brasil?", showOk, showCancel); */
+
+let nome = prompt("Qual seu nome?");
+
+let showMessage = function(){
+    alert(`Hello, ${nome}`)
+}
+
+showMessage();
