@@ -1,15 +1,18 @@
 let prompt = require('prompt-sync')();
 
 let user = {
-    name: prompt('Digite seu nome: '),
-    age: parseInt(prompt('digite sua idade: '))
+    name: prompt('Digite seu nome: ')
 };
 
-if(user.age < 0 || isNaN(user.age)){
-    console.log('insira uma idade valida')
-    age: parseInt(prompt('digite novamente sua idade: '))
-} else{
-    console.log(`seu nome é : ${user.name}, e sua idade é: ${user.age} anos`);
-}
-    
+let age;
+
+do{
+    age = parseInt(prompt('Qual é a sua idade? '));
+    if(isNaN (age) || age < 0 ){
+        console.log('Insira uma idade válida.');
+    }
+} while (isNaN(age) || age < 0);
+
+user.age = age;
+console.log(`Seu nome é ${user.name} e sua idade é ${user.age} anos`);
         
