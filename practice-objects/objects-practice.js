@@ -1,19 +1,35 @@
 let prompt = require('prompt-sync')();
 
-const carro = {
-    marca: prompt('Digite a marca do seu carro (exemplo: nissan, toyota, honda): '),
 
+const brands = {
+    nissan: 'nissan',
+    toyota: 'toyota',
+    honda: 'honda'
 }
 
-modelo = () => {
-    if(carro.marca == 'nissan'){
+function checkBrands() {
+    const result = prompt('Digite a marcas de carro que possui (exemplo: nissan, toyota, honda): ')
+    if( result in brands){
+        brands.car = result;
+        console.log(car);
+        modelo();
+    } console.log('Digite uma das marcas como exemplo')
+}
+checkBrands()
+
+const car = {
+    
+}
+
+
+/* modelo = () => {
+    if(carro.marca == 'nissan' || carro.marca == 'toyota' || carro.marca == 'honda' ){
         modelo = prompt('Informe o modelo do carro: ')
         carro.modelo = modelo;
-        console.log(`A marca do seu carro é ${carro.marca} e o modelo é ${carro.modelo}`);
 
     }
 }
 
-modelo();
 
-console.log(carro);
+
+modelo(); */
