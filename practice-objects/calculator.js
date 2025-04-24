@@ -22,7 +22,7 @@ console.log('Soma=' + calculator.sum());
 console.log('Multiplicacao=' + calculator.mul()); */
 
 
-function Pessoa(){
+/* function Pessoa(){
     this.read = function(){
         this.name = prompt('Digite seu nome: ');
         this.age = +prompt('Digite sua idade: ');
@@ -37,4 +37,40 @@ function Pessoa(){
 
 let pessoa1 = new Pessoa();
 pessoa1.read();
-pessoa1.show();
+pessoa1.show(); */
+
+function ContaBancaria(){
+    this.usuario = function(){
+        this.titular = prompt('Digite o nome do titular da conta: ');
+        this.saldoInicial = +prompt('Digite o valor inicial da conta: ');
+    }
+
+    this.mostrarSaldo = function(){
+        console.log('Titular da conta: ' + this.titular);
+        console.log('Saldo da conta: R$'+ this.saldo()); // 
+    }
+
+    this.depositar = function(){
+        let deposito = +prompt('Digite o valor à ser depositado: ');
+        this.saldo = function(){
+            return deposito + this.saldoInicial;
+        }
+    };
+
+    this.sacar = function(){
+        this.sacar = +prompt('Digite o valor a ser sacado: ');
+        if(this.sacar > this.saldo){
+            console.log('Saldo insuficiente!')
+        } else {
+            this.saldo = this.sacar - this.saldo();
+            console.log(`Saldo da conta: ${this.mostrarSaldo()}`);
+        }
+    }
+}
+
+
+let banco = new ContaBancaria();
+banco.usuario();
+banco.depositar();
+banco.sacar();
+banco.mostrarSaldo();
