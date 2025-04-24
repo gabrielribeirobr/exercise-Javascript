@@ -30,7 +30,15 @@ function carModel(){
 function carAge(){
     const age = prompt('Qual o ano do seu carro? ')
     car.age = age;
-    console.log(car);
+    console.log(car);    
 }
+
+const rmBrand = prompt('Deseja remover uma marca, modelo ou ano? ')
+if(rmBrand == 'marca ' || rmBrand == 'modelo' || rmBrand == 'ano'){
+    this.result = rmBrand
+
+    
+} 
+
 
 
