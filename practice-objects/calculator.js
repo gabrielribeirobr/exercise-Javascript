@@ -24,14 +24,17 @@ console.log('Multiplicacao=' + calculator.mul()); */
 
 function Pessoa(){
     this.read = function(){
-        this.name = prompt('Digite seu nome ');
-        this.age = +prompt('Digite sua idade');
+        this.name = prompt('Digite seu nome: ');
+        this.age = +prompt('Digite sua idade: ');
     };
 
-    function read(){
-        return console.log(Pessoa);
+    this.show = function(){
+        console.log('Nome: ' + this.name);
+        console.log('Idade: ' + this.age);
+
     };
 }
 
-let pessoa1 = pessoa();
-read.Pessoa();
+let pessoa1 = new Pessoa();
+pessoa1.read();
+pessoa1.show();
