@@ -42,28 +42,31 @@ pessoa1.show(); */
 function ContaBancaria(){
     this.usuario = function(){
         this.titular = prompt('Digite o nome do titular da conta: ');
-        this.saldoInicial = +prompt('Digite o valor inicial da conta: ');
+        this.saldo = +prompt('Digite o valor inicial da conta: ');
     }
 
     this.mostrarSaldo = function(){
+        console.log('==========================');
         console.log('Titular da conta: ' + this.titular);
-        console.log('Saldo da conta: R$'+ this.saldo()); // 
+        console.log('Saldo da conta: R$'+ this.saldo);
+        console.log('==========================');
     }
 
     this.depositar = function(){
         let deposito = +prompt('Digite o valor à ser depositado: ');
-        this.saldo = function(){
-            return deposito + this.saldoInicial;
-        }
+        this.saldo += deposito;
+        console.log('==========================');
+        console.log('Deposito realizado com sucesso!')
+        console.log('==========================');
     };
 
     this.sacar = function(){
-        this.sacar = +prompt('Digite o valor a ser sacado: ');
-        if(this.sacar > this.saldo){
+        let valor = +prompt('Digite o valor a ser sacado: ');
+        if(valor > this.saldo){
             console.log('Saldo insuficiente!')
         } else {
-            this.saldo = this.sacar - this.saldo();
-            console.log(`Saldo da conta: ${this.mostrarSaldo()}`);
+            this.saldo -= valor;
+            console.log(`Saque de R$ ${valor} realizado com sucesso.`)
         }
     }
 }
@@ -71,6 +74,7 @@ function ContaBancaria(){
 
 let banco = new ContaBancaria();
 banco.usuario();
+banco.mostrarSaldo();
 banco.depositar();
 banco.sacar();
 banco.mostrarSaldo();
