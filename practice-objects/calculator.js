@@ -78,3 +78,7 @@ banco.mostrarSaldo();
 banco.depositar();
 banco.sacar();
 banco.mostrarSaldo();
+
+/* Oque aprendemos hoje: sempre que criarmos uma função construtora, devemos declara-la com uma variavel e chama-la utilizando o "NEW"
+as propriedades que estiverem dentro dessa função construtora deverá ser chamada com o "THIS"
+utilizar o "+=" significa que estamos pegando um valor somando outro e guardando de volta nele por exemplo -> x += 5 é o mesmo que x = x + 5 */
