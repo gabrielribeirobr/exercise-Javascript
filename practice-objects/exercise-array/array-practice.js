@@ -1,8 +1,10 @@
 let tarefas = ['lavar louças', 'Estudar javascript', 'Fazer exercicios', 'Limpar o quarto', 'Comprar pão'];
 
-tarefas.forEach(function(tarefa){ //mostra todas as tarefas na tela
-    console.log(tarefa);
-});
+function mostrarTarefas(lista){
+    lista.forEach(tarefa => console.log(tarefa));
+}
+
+mostrarTarefas(tarefas);
 console.log('=========================================')
 
 tarefas.push('Estudar Inglês', 'Nadar', 'Jogar'); // adiciona mais uma tarefa ao array
@@ -10,18 +12,14 @@ console.log('Tarefa adicionada');
 
 console.log('=========================================')
 
-tarefas.forEach(function(tarefa){ // mostra novamente todas as tarefas com a ultima tarefa adicionada
-    console.log(tarefa);
-});
+mostrarTarefas(tarefas);
 
 console.log('=========================================')
 tarefas.pop() 
 console.log('Tarefa removida');
 console.log('=========================================')
 
-tarefas.forEach(function(tarefa){ // mostra novamente todas as tarefas com a ultima tarefa removida
-    console.log(tarefa);
-});
+mostrarTarefas(tarefas);
 
 console.log('=========================================') 
 const fiveLetters = tarefas.filter(tarefa => tarefa.length >= 5 ); // mostra apenas tarefas que contem cinco ou mais letras
