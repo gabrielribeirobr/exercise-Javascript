@@ -54,6 +54,11 @@ function removeItem() {
 
 if (ask === 'sim') {
     removeItem();
+} else {
+    console.log('carrinho com produtos finais: ')
+    shoppingCart.forEach((item, index) => {
+        console.log(`${index + 1}. ${item}`);
+    });
 }
 
 
