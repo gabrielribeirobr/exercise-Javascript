@@ -32,4 +32,3 @@ const nomesMaiusculos = tarefas.map(function(tarefa){ // define todas as tarefas
 
 console.log(nomesMaiusculos);
 console.log('=========================================') 
-
